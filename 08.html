@@ -5,10 +5,18 @@
     */    
    
     //ENTRADA
-
+    const ladoUm = prompt("Diga um lado triangulo.");
+    const ladoDois = prompt("Diga outro lado triangulo.");
+    const ladoTres = prompt("Diga o último lado triangulo.");
     
     //PROCESSAMENTO
-    
+    if (ladoUm == ladoDois && ladoDois == ladoTres && ladoTres == ladoUm) {
+        alert(`Esse triâgulo é equilatero.`)
+    } else if (ladoUm == ladoDois || ladoUm == ladoTres || ladoDois == ladoTres) {
+        alert(`Esse triâgulo é isóceles.`)
+    } else if (ladoUm != ladoDois && ladoUm != ladoTres && ladoDois != ladoTres) {
+        alert(`Esse triâgulo é escaleno.`)
+    };
     
     //SAÍDA
 

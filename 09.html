@@ -8,9 +8,41 @@
     */
 
     //ENTRADA
-
+    const numeroUm = Number(prompt("Diga um número"))
+    const numeroDois = Number(prompt("Diga um número"))
+    const operacao = prompt("Diga uma operacao matematica")
 
     //PROCESSAMENTO
+    let calculo
+    let inteiro
+ 
+    if (operacao == "x") {
+        calculo = numeroUm * numeroDois;
+    } else if (operacao == "+") {
+        calculo = numeroUm + numeroDois;
+    } else if (operacao == "-") {
+        calculo = numeroUm - numeroDois;
+    } else if (operacao == "÷") {
+        calculo = numeroUm / numeroDois;
+    };
+
+    const validar = Math.ceil(calculo)
+    if (validar == calculo) {
+        inteiro = "inteiro"
+    } else {
+        inteiro = "decimal"
+    };
+
+    const validarDois = (2 *(Math.ceil(calculo / 2))) - calculo ;
+    if (validarDois == 0) {
+        par = "par"
+    } else {
+        par = "ímpar"
+    };
+
+    alert(`O resultado ficou: ${calculo}
+    Esse número é ${par}
+    Esse número é ${inteiro}`);
 
     
     //SAÍDA
