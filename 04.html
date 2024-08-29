@@ -6,10 +6,15 @@
     */
 
     //ENTRADA
-    
-
+    const nota1 = Number(prompt(`Qual sua nota mini irmao`));
+    const nota2 = Number(prompt(`Qual sua nota depois maior irmao te ajudar mini irmao`));
     
     //PROCESSAMENTO
+    if (nota2 > nota1) {
+        const pia = nota2 - nota1;
+        const guri = pia * 0.25;
+        alert(` O acréscimo na nota do maior irmão será de ${guri}`);
+        }
     
     
     //SAÍDA

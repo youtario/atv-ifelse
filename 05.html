@@ -5,9 +5,16 @@
     */
 
     //ENTRADA
+    const number = Number(prompt(`Informe um número`));
 
     
     //PROCESSAMENTO
+    const validar = (2 *(Math.ceil(number / 2))) - number;
+    if (validar == 0) {
+        alert(`${number} é par`);
+    } else if (validar != 0) {
+        alert(`${alert} é impar`);
+    }
     
     
     //SAÍDA

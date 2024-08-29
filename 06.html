@@ -11,11 +11,24 @@
     */
 
     //ENTRADA
-
+    const numero = Number(prompt("Digite um número."));
 
     //PROCESSAMENTO
+    if (numero >= 1000) {
+        alert("Número Inválido!")
+    } else if ( numero >= 100) {
+       const centena = Math.floor(numero / 100);
+       const dezena = Math.floor((numero - (centena * 100)) / 10);
+       const unidade = Math.floor(numero - ((centena * 100) + (dezena * 10)));
+       alert(`Esse número têm ${centena} centena(s), ${dezena} dezena(s) e ${unidade} unidade(s)`)
+    } else if (numero >= 10) {
+        const dezena = Math.floor(numero / 10);
+        const unidade = Math.ceil(numero - (dezena * 10 ));
+        alert(`Esse número têm ${dezena} dezena(s) e ${unidade} unidade(s).`)
+    } else if (numero < 10) {
+        alert(`Esse número tem ${numero} unidade(s).`)
+    };
 
-    
     //SAÍDA
 
 </script>
