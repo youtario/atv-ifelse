@@ -14,11 +14,26 @@
     */
 
     //ENTRADA
-
+    const combustivel = prompt("Que combustível comprará? (A-álcool G-gasolina)").toUpperCase().trim();
+    const litros = Number(prompt("Quantos litros comprará?"));
+    let preco;
 
     //PROCESSAMENTO
-
+    if (combustivel == "A") {
+        if (litros > 20) {
+            preco = (litros * (6.10 * 0.95)).toFixed(2);
+        } else {
+            preco = (litros * (6.10 * 0.97)).toFixed(2);
+        };
+    } else if (combustivel == "G") {
+        if (litros > 20) {
+            preco = (litros * (6.50 * 0.94)).toFixed(2);
+        } else {
+            preco = (litros * (6.50 * 0.96)).toFixed(2);
+        };
+    };
     
     //SAÍDA
+    alert(`Você pagará ${preco} reais de combustível.`);
 
 </script>

@@ -10,11 +10,23 @@
     */
 
     //ENTRADA
+    const porte = prompt("Qual o porte do seu cão? (pequeno, médio ou grande)").toUpperCase().trim();
+    const idade = Number(prompt("Qual a idade do seu cão?"));
+    let fator;
 
-    
     //PROCESSAMENTO
+   
+    if (porte == "PEQUENO") {
+        fator = 5;
+    } else if (porte == "MEDIO" || porte == "MÉDIO") {
+        fator = 6;
+    }else if (porte == "GRANDE") {
+        fator = 7;
+    };
 
-    
+    const idadeCao = fator * idade;
+
     //SAÍDA
+    alert(`A idade de cão do seu cão é ${idadeCao}.`);
 
 </script>

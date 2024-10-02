@@ -5,12 +5,24 @@
     Recebe um ano e informa se ele é bissexto ou não.
     */
 
-    //ENTRADA
 
-    
-    //PROCESSAMENTO
+    // ENTRADA
+    let ano = Number(prompt("Digite um ano:"));
 
-    
-    //SAÍDA
+    // PROCESSAMENTO
+    let bissexto;
+
+    if ((ano % 4 === 0 && ano % 100 !== 0) || (ano % 400 === 0)) {
+        bissexto = true;
+    } else {
+        bissexto = false;
+    };
+
+    // SAÍDA
+    if (bissexto == true) {
+        alert("O ano " + ano + " é bissexto.");
+    } else {
+        alert("O ano " + ano + " não é bissexto.");
+    };
 
 </script>

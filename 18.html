@@ -7,10 +7,34 @@
 
     //ENTRADA
 
+    const hemisferio = prompt("Diga em qual hemisfério você vive: (norte-N | sul-S)").toUpperCase().trim();
+    const mesAtual = Number(prompt("Diga em qual mês você está: (Em números.)"));
+    let estacao;
 
     //PROCESSAMENTO
+    if (hemisferio == "N") {
+        if (mesAtual == 1 || mesAtual == 2 || mesAtual == 3) {
+            estacao = "inverno"
+        } else if (mesAtual == 4 || mesAtual == 5 || mesAtual == 6) {
+            estacao = "primavera"
+        } else if (mesAtual == 7 || mesAtual == 8 || mesAtual == 9) {
+            estacao = "verão"
+        } else if (mesAtual == 10 || mesAtual == 11 || mesAtual == 12) {
+            estacao = "outono"
+        };
+    } else if (hemisferio == "S") {
+        if (mesAtual == 1 || mesAtual == 2 || mesAtual == 3) {
+            estacao = "verão"
+        } else if (mesAtual == 4 || mesAtual == 5 || mesAtual == 6) {
+            estacao = "outono"
+        } else if (mesAtual == 7 || mesAtual == 8 || mesAtual == 9) {
+            estacao = "inverno"
+        } else if (mesAtual == 10 || mesAtual == 11 || mesAtual == 12) {
+            estacao = "primavera"
+        };
+    };
 
-    
     //SAÍDA
-
+    alert(`A estação é ${estacao}.`);
+    
 </script>

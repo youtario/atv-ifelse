@@ -10,11 +10,21 @@
     */
 
     //ENTRADA
+    const peso = Number(prompt("Informe seu peso."));
+    const altura =  Number(prompt("Informe sua altura. (Informe em centímetros)"));
 
-    
     //PROCESSAMENTO
-
+    const imc = peso / ((altura / 100) * 2);
     
-    //SAÍDA
+    //SAÍDA]
+    if (imc <= 18.5) {
+        alert(`Está com subpeso.`);
+    } else if (imc <= 25.0) {
+        alert(`Está normal.`);
+    } else if (imc <= 30.0) {
+        alert(`.Está com sobrepeso.`);
+    } else if (imc > 30.0) {
+        alert(`Está obeso.`);
+    };
 
 </script>

@@ -6,11 +6,16 @@
     */
 
     //ENTRADA
-
+    const numero = Number(prompt("Digite um número."));
 
     //PROCESSAMENTO
+    const validar = Math.ceil(numero);
 
-    
     //SAÍDA
+    if (validar == numero) {
+        alert(`${numero} é inteiro`);
+    } else if (validar != numero) {
+        alert(`${numero} é decimal`);
+    };
 
 </script>

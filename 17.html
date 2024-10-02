@@ -10,11 +10,24 @@
     */
 
     //ENTRADA
+    const preco = Number(prompt("Diga o preço do produto."));
+    let aumento;
 
-    
     //PROCESSAMENTO
+    if (preco > 1500) {
+        aumento = (preco * 1.05);
+        alert(`O produto teve um aumento no preço de 5% e agora custa ${aumento} reais.`);
+    } else if (preco <= 280) {
+        aumento = (preco * 1.20);
+        alert(`O produto teve um aumento no preço de 20% e agora custa ${aumento} reais.`);
+    } else if (preco <= 700) {
+        aumento = (preco * 1.15);
+        alert(`O produto teve um aumento no preço de 15% e agora custa ${aumento} reais.`);
+    } else if (preco <= 1500) {
+        aumento = (preco * 1.10);
+        alert(`O produto teve um aumento no preço de 10% e agora custa ${aumento} reais.`);
+    };
 
-    
     //SAÍDA
 
 </script>
